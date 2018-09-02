@@ -1,0 +1,59 @@
+print("\n\n.............................WELCOME TO CONSOLE CALCULATOR......................\n");
+a=0;
+while(a!=1):
+	#define all operations
+	def add(num1,num2):
+		return(num1+num2);
+	def sub(num1,num2):
+		return(num1-num2);
+	def mul(num1,num2):
+		return(num1*num2);
+	def div(num1,num2):
+		return(num1/num2);
+	#define main function where all program will be done 
+	def main():
+		print("chose an operator + - * /");
+		j=0;
+		while(j!=1):
+			o=input();
+			if(o!='+' and o!='-'and o!='*'and o!='/'):
+				print("invalid operator\n");
+			else:
+				j=1;
+				'''if(j==1):
+					break'''#creates same effect
+		
+		print("enter numbers to operate\n");
+		x=0;
+		while(x!=1):
+			try:
+				var1=float(input());
+				print(o);
+				var2=float(input());
+				print("=");
+				x=1;
+				#if there no invalid control dont goto except,#and key x=1 assigned not while loop breaks and program proceeds#if exception occurs assignment of x=1 fails ,so while condition #true and while loop continues
+			except:
+				print("invalid i/p try again");
+				#x=1; #here if we put x, for valid inputs  # no exception means no modification of 'x' #so while loop run till there is an invalid input #if an invalid input occurs loop breaks and goes to if statment #so there will an no assignment type error
+		if(o=='+'):
+			print(add(var1,var2));
+		if(o=='-'):
+			print(sub(var1,var2));
+		if(o=='*'):
+			print(mul(var1,var2));
+		if(o=='/'):
+			print(div(var1,var2));
+		return()	
+	main()	#called coz all programming is there only in main function #so if we put there a return in def od main we return here ...	#at line 50;
+	print("\nTO CONTINUE--------> ENTER ANY KEY\nTO EXIT------------> ENTER 1 ");
+	i=(input());
+	if(i=='1'):
+		a=1;
+	#else:
+		#main() .......not required coz while keeps on runing if i!=1; and automatically comes outof while loop if i==1;
+		
+			
+		
+
+
